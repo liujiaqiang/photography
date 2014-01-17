@@ -1,5 +1,5 @@
 package com.stardream.project.photography;
 
-public class HelloActivity {
+public class LoginActivity {
 
 }
