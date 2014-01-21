@@ -25,6 +25,41 @@
 			<result name="error">/error.jsp</result>
 		</action>
 		<!--NewsCategory end!-->
+		
+		<!--Announcement start!-->	
+		<action name="addAnnouncement" class="com.stardream.project.photography.action.AddAnnouncementAction" method="addAnnouncement">
+			<result name="success">/success.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--Announcement end!-->
+		
+		<!--Links start!-->	
+		<action name="addlinks" class="com.stardream.project.photography.action.AddLinksAction" method="addlinks">
+			<result name="success">/success.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--Links end!-->
+		
+		<!--Collect start!-->	
+		<action name="addcollect" class="com.stardream.project.photography.action.AddCollectAction" method="addcollect">
+			<result name="success">/success.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--Collect end!-->
+		
+		<!--UserInfo start!-->	
+		<action name="register" class="com.stardream.project.photography.action.RegisterAction" method="register">
+			<result name="success">/success.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--UserInfo end!-->
+		
+		<!--UserInfo start!-->	
+		<action name="addfriend" class="com.stardream.project.photography.action.AddFriendAction" method="addfriend">
+			<result name="success">/success.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--UserInfo end!-->
 	</package>
 	
 </struts>

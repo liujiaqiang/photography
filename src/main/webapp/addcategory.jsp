@@ -8,9 +8,9 @@
 </head>
 <body>
 	<form action="addCategory.shtml" method="post">
-		<input name="name" type="text"><br>
-		<input name="description" type="text"><br>
-		<input value="提交"  type="submit"><br>
+		名称:<input name="name" type="text"><br>
+		描述:<input name="description" type="text"><br>
+		<input value="提交"  type="submit"><input value="重置"  type="reset"><br>
 	</form>
 </body>
 </html>
