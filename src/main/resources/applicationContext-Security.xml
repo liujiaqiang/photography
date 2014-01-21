@@ -9,7 +9,10 @@
    <http pattern="/css/**" security="none"/> 
    <http pattern="/images/**" security="none"/> 
    <http pattern="/authImg" security="none"/> 
+   <http pattern="/addCategory.jsp" security="none"/> 
    <http pattern="/login.jsp" security="none"/> 
+   <http pattern="/error.jsp" security="none"/> 
+   <http pattern="/success.jsp" security="none"/> 
    <http pattern="/index.jsp" security="none"/> 
    <http pattern="/accessDenied.jsp" security="none"/> 
    

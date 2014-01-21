@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<constant name="struts.compatibilityMode.WebWork" value="true" />
+	<constant name="struts.action.extension" value="shtml" />
+	<constant name="struts.ui.theme" value="simple" />
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<constant name="struts.devMode" value="false" />
+	<package name="struts_default" extends="json-default" namespace="/">
+
+		<global-results>
+			<result name="Exception">/error.jsp</result>
+		</global-results>
+		<global-exception-mappings>
+			<exception-mapping exception="java.lang.Exception"
+				result="Exception" />
+		</global-exception-mappings>
+		
+		<!--NewsCategory start!-->	
+		<action name="addCategory" class="com.stardream.project.photography.action.AddNewsCategoryAction" method="addCategory">
+			<result name="success">/success.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--NewsCategory end!-->
+	</package>
+	
+</struts>
