@@ -24,6 +24,11 @@
 			<result name="success">/success.jsp</result>
 			<result name="error">/error.jsp</result>
 		</action>
+		
+		<action name="listCategory" class="com.stardream.project.photography.action.ListNewsCategoryAction" method="listCategory">
+			<result name="success">/selectCategory.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
 		<!--NewsCategory end!-->
 		
 		<!--Announcement start!-->	
@@ -36,6 +41,11 @@
 		<!--Links start!-->	
 		<action name="addlinks" class="com.stardream.project.photography.action.AddLinksAction" method="addlinks">
 			<result name="success">/success.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="listlinks" class="com.stardream.project.photography.action.ListLinksAction" method="listlinks">
+			<result name="success">/listlinks.jsp</result>
 			<result name="error">/error.jsp</result>
 		</action>
 		<!--Links end!-->
