@@ -70,11 +70,11 @@
             <div class="templatemo_bottom_section_content">
                 <h3>合作伙伴</h3>
                  <ul>
-                    <li><a href="#">夏都旅行社</a></li>
-                    <li><a href="#">西部传媒</a></li>
-                    <li><a href="#">夏都旅行社</a></li>
-                    <li><a href="#">西部传媒</a></li>
-                    <li><a href="#">夏都旅行社</a></li>
+                    <li><a href="http://www.mobifox.cn">夏都旅行社</a></li>
+                    <li><a href="http://www.mobifox.cn">西部传媒</a></li>
+                    <li><a href="http://www.mobifox.cn">夏都旅行社</a></li>
+                    <li><a href="http://www.mobifox.cn">西部传媒</a></li>
+                    <li><a href="http://www.mobifox.cn">夏都旅行社</a></li>
                 </ul>
             </div>
         </div> <!-- end of templatemo bottom section -->
