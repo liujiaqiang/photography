@@ -31,13 +31,13 @@
     <div id="templatemo_menu_panel">
     	<div id="templatemo_menu_section">
             <ul>
-                <li><a href="index.html"  class="current">首页</a></li>
-                <li><a href="#">摄影论坛</a></li>
-                <li><a href="#">个人影展</a></li>  
-                <li><a href="#">影展影赛</a></li>
-                <li><a href="#">影友专区</a></li> 
-                <li><a href="#">协会信息</a></li>                     
-                <li><a href="#">三边文化</a></li>                     
+                <li><a href="index.jsp"  class="current">首页</a></li>
+                <li><a href="newsdetail.shtml?id=AwAHBwgBAQYAAQAGAAAEBgAAAAgJAAAAAAAABwQDCAgGAAAB">摄影论坛</a></li>
+                <li><a href="newsdetail.shtml?id=AAAAAwMICAAABQAABAAEAAIAAAgJBAMAAAgBAAAEAAAAAAAA">个人影展</a></li>  
+                <li><a href="newsdetail.shtml?id=AAYCAAACAgYACAQJCQAEAgAAAAgFAgAAAAAAAAIAAAQDCAIB">影展影赛</a></li>
+                <li><a href="newsdetail.shtml?id=CAAAAAQDAAAAAAAGBwAEBgAAAAgGAAAACAcFAAACAwgGCAkA">影友专区</a></li> 
+                <li><a href="newsdetail.shtml?id=AwAHBwgBAQYAAQAGAAAEBgAAAAgJAAAAAAAABwQDCAgGAAAB">协会信息</a></li>                     
+                <li><a href="newsdetail.shtml?id=AAAAAwMICAAABQAABAAEAAIAAAgJBAMAAAgBAAAEAAAAAAAA">三边文化</a></li>                        
             </ul> 
 		</div>
     </div> <!-- end of menu -->

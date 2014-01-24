@@ -20,9 +20,9 @@
                                                   三边摄影网
 			</div>
             <div id="templatemo_search_section">
-                <form method="get" action="#">
+                <form method="get" action="http://www.baidu.com/baidu" target="_blank">
                     <input type="radio" name="search" value="thissite" />本站 <input type="radio" name="search" value="theweb" checked="checked" /> 百度 <br />
-                    <input type="text" name="q" size="10" id="searchfield" title="searchfield" />
+                    <input type="text" name="word" size="10" id="searchfield" title="searchfield" />
                     <input type="submit" name="Search" value="搜索" alt="搜索" id="searchbutton" title="搜索" />
                 </form>
             </div>
@@ -33,12 +33,12 @@
     	<div id="templatemo_menu_section">
             <ul>
                 <li><a href="index.jsp"  class="current">首页</a></li>
-                <li><a href="#">摄影论坛</a></li>
-                <li><a href="#">个人影展</a></li>  
-                <li><a href="#">影展影赛</a></li>
-                <li><a href="#">影友专区</a></li> 
-                <li><a href="#">协会信息</a></li>                     
-                <li><a href="#">三边文化</a></li>                     
+                <li><a href="newsdetail.shtml?id=AwAHBwgBAQYAAQAGAAAEBgAAAAgJAAAAAAAABwQDCAgGAAAB">摄影论坛</a></li>
+                <li><a href="newsdetail.shtml?id=AAAAAwMICAAABQAABAAEAAIAAAgJBAMAAAgBAAAEAAAAAAAA">个人影展</a></li>  
+                <li><a href="newsdetail.shtml?id=AAYCAAACAgYACAQJCQAEAgAAAAgFAgAAAAAAAAIAAAQDCAIB">影展影赛</a></li>
+                <li><a href="newsdetail.shtml?id=CAAAAAQDAAAAAAAGBwAEBgAAAAgGAAAACAcFAAACAwgGCAkA">影友专区</a></li> 
+                <li><a href="newsdetail.shtml?id=AwAHBwgBAQYAAQAGAAAEBgAAAAgJAAAAAAAABwQDCAgGAAAB">协会信息</a></li>                     
+                <li><a href="newsdetail.shtml?id=AAAAAwMICAAABQAABAAEAAIAAAgJBAMAAAgBAAAEAAAAAAAA">三边文化</a></li>                         
             </ul> 
 		</div>
     </div> <!-- end of menu -->
