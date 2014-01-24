@@ -105,15 +105,18 @@
             
                 <div class="templatemo_right_section">
                     <h2>公告</h2>
-                    <p>三边摄影网正式上线</p>
-                    <p>三边摄影网正式上线</p>
+                   	<ul>
+                       <s:action name="listnews" namespace="/" executeResult="true">
+                       		<s:param name="newscategory" value="1"></s:param>
+                       </s:action>
+                    </ul>    
                 </div>
             
             	<div class="templatemo_right_section">
                 	<h2>协会活动资讯</h2>
 					<ul>
                        <s:action name="listnews" namespace="/" executeResult="true">
-                       		<s:param name="newscategory" value="3"></s:param>
+                       		<s:param name="newscategory" value="1"></s:param>
                        </s:action>
                     </ul>    
                 </div>
@@ -131,7 +134,7 @@
 	                <h2>西部传媒活动发布</h2>
                 	<ul>	
                         <s:action name="listnews" namespace="/" executeResult="true">
-                        	<s:param name="newscategory" value="2"></s:param>
+                        	<s:param name="newscategory" value="1"></s:param>
                         </s:action>
                     </ul>
                 </div>
@@ -140,7 +143,7 @@
 	                <h2>本周影赛排行榜</h2>
                 	<ul>	
                         <s:action name="listnews" namespace="/" executeResult="true">
-                        	<s:param name="newscategory" value="4"></s:param>
+                        	<s:param name="newscategory" value="1"></s:param>
                         </s:action>
                     </ul>
                 </div>
