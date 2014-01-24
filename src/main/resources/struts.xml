@@ -70,6 +70,18 @@
 			<result name="error">/error.jsp</result>
 		</action>
 		<!--UserInfo end!-->
+		
+		<!--UserInfo start!-->	
+		<action name="listnews" class="com.stardream.project.photography.action.ListNewsAction" method="listnews">
+			<result name="success">/listnews.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="newsdetail" class="com.stardream.project.photography.action.NewsDetailAction" method="newsdetail">
+			<result name="success">/newsdetail.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--UserInfo end!-->
 	</package>
 	
 </struts>

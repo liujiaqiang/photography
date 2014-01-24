@@ -70,4 +70,8 @@
 
 	<context:component-scan base-package="com.stardream.project.photography.*" />
 	
+	<bean id="solrDao" class="com.stardream.project.photography.dao.impl.SolrDaoImpl">
+	    <property name="solrUrl" value="${solr.url}"></property>
+	</bean>
+	
 </beans>

@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.stardream.project.photography.dao.BaseDAO;
 import com.stardream.project.photography.service.GenericService;
 
 
@@ -13,7 +14,7 @@ import com.stardream.project.photography.service.GenericService;
  */
 public class GenericServiceImpl<T, K extends Serializable> implements GenericService<T, K> {
 	@Autowired
-	protected com.stardream.project.photography.dao.BaseDAO<T, K> baseDAO;
+	protected BaseDAO<T, K> baseDAO;
 
 	@Override
 	public T saveorupdate(T t) throws Exception {
