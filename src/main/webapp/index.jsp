@@ -10,6 +10,8 @@
 <meta name="description" content="三边摄影网" />
 <link href="css/templatemo_style.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="css/contentslider.css" />
+<script type="text/javascript" src="js/jquery-1.10.1.js"></script>
+<script type="text/javascript" src="js/base.js"></script>
 <script type="text/javascript" src="js/contentslider.js">
 </script>
 </head>
@@ -20,10 +22,10 @@
                                                   三边摄影网
 			</div>
             <div id="templatemo_search_section">
-                <form method="get" action="http://www.baidu.com/baidu" target="_blank">
-                    <input type="radio" name="search" value="thissite" />本站 <input type="radio" name="search" value="theweb" checked="checked" /> 百度 <br />
+                <form method="get"  target="_blank" id="myform">
+                    <input type="radio" name="search" value="thissite" checked="checked" />本站 <input type="radio" name="search" value="theweb"/> 百度 <br />
                     <input type="text" name="word" size="10" id="searchfield" title="searchfield" />
-                    <input type="submit" name="Search" value="搜索" alt="搜索" id="searchbutton" title="搜索" />
+                    <input type="submit" onclick="return checksearch();" name="Search" value="搜索" alt="搜索" id="searchbutton" title="搜索" />
                 </form>
             </div>
         </div>
@@ -134,6 +136,7 @@
                        <s:action name="listnews" namespace="/" executeResult="true">
                        		<s:param name="newscategory" value="1"></s:param>
                        </s:action>
+                       <li ><a href="listnewscategory.jsp" target="_blank">更多>></a></li>
                     </ul>    
                 </div>
             
@@ -143,24 +146,27 @@
                        <s:action name="listnews" namespace="/" executeResult="true">
                        		<s:param name="newscategory" value="1"></s:param>
                        </s:action>
+                        <li ><a href="listnewscategory.jsp" target="_blank">更多>></a></li>
                     </ul>    
                 </div>
                 
                 <div class="templatemo_right_section">
-                	<h2>夏都旅行社活动发布</h2>
+                	<h2>夏都旅行社活动</h2>
 					<ul>
                         <s:action name="listnews" namespace="/" executeResult="true">
                         	<s:param name="newscategory" value="1"></s:param>
                         </s:action>
+                         <li ><a href="listnewscategory.jsp" target="_blank">更多>></a></li>
                     </ul>  
                 </div>
                 
                 <div class="templatemo_right_section">
-	                <h2>西部传媒活动发布</h2>
+	                <h2>西部传媒活动</h2>
                 	<ul>	
                         <s:action name="listnews" namespace="/" executeResult="true">
                         	<s:param name="newscategory" value="1"></s:param>
                         </s:action>
+                         <li ><a href="listnewscategory.jsp" target="_blank">更多>></a></li>
                     </ul>
                 </div>
                 
@@ -170,6 +176,7 @@
                         <s:action name="listnews" namespace="/" executeResult="true">
                         	<s:param name="newscategory" value="1"></s:param>
                         </s:action>
+                         <li ><a href="listnewscategory.jsp" target="_blank">更多>></a></li>
                     </ul>
                 </div>
                 
@@ -198,12 +205,12 @@
             
             <div class="templatemo_bottom_section_content">
                 <h3>合作伙伴</h3>
-                 <ul>
-                    <li><a href="http://www.mobifox.cn">夏都旅行社</a></li>
-                    <li><a href="http://www.mobifox.cn">西部传媒</a></li>
-                    <li><a href="http://www.mobifox.cn">夏都旅行社</a></li>
-                    <li><a href="http://www.mobifox.cn">西部传媒</a></li>
-                    <li><a href="http://www.mobifox.cn">夏都旅行社</a></li>
+                <ul>
+                    <li><a href="http://www.mobifox.cn" target="_parent">夏都旅行社</a></li>
+                    <li><a href="http://www.mobifox.cn" target="_parent">西部传媒</a></li>
+                    <li><a href="http://www.mobifox.cn" target="_parent">夏都旅行社</a></li>
+                    <li><a href="http://www.mobifox.cn" target="_parent">西部传媒</a></li>
+                    <li><a href="http://www.mobifox.cn" target="_parent">夏都旅行社</a></li>
                 </ul>
             </div>
         </div> <!-- end of templatemo bottom section -->

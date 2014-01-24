@@ -20,7 +20,7 @@
 			</div>
             <div id="templatemo_search_section">
                 <form method="get"  target="_blank" id="myform">
-                    <input type="radio" name="search" value="thissite" checked="checked" />本站 <input type="radio" name="search" value="theweb" /> 百度 <br />
+                    <input type="radio" name="search" value="thissite" checked="checked"/>本站 <input type="radio" name="search" value="theweb" /> 百度 <br />
                     <input type="text" name="word" size="10" id="searchfield" title="searchfield" />
                     <input type="submit" onclick="return checksearch();" name="Search" value="搜索" alt="搜索" id="searchbutton" title="搜索" />
                 </form>
@@ -43,8 +43,14 @@
     </div> <!-- end of menu -->
     
 	<div id="templatemo_content_container">
-        <div id="templatemo_content" style="color: #dbb4e0;min-height: 600px;">
-        	<s:property value="news.content" escape="false" />
+        <div id="templatemo_content" style="color: #dbb4e0;min-height: 500px;">
+			<ul>
+				<s:iterator value="news" var="mnews">
+					<li><a
+						href="newsdetail.shtml?id=<s:property value="#mnews.id"/>"
+						target="_blank"><s:property value="#mnews.title" /></a></li>
+				</s:iterator>
+			</ul>  
 	    </div> <!-- end of content -->
     </div> <!-- end of content container -->
 
@@ -57,7 +63,7 @@
             	
             </div>
             <div class="templatemo_bottom_section_content">
-                <h3>友情链接</h3>
+                <h3>友情链接 </h3>
                 <ul>
                     <li><a href="http://www.baidu.com" target="_parent">百度</a></li>
                     <li><a href="http://www.baidu.com" target="_parent">淘宝</a></li>

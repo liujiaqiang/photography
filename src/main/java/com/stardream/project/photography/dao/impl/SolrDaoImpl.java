@@ -6,6 +6,7 @@ import java.util.List;
 import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.SolrServer;
 import org.apache.solr.client.solrj.SolrServerException;
+import org.apache.solr.client.solrj.SolrQuery.ORDER;
 import org.apache.solr.client.solrj.impl.HttpSolrServer;
 import org.apache.solr.client.solrj.response.QueryResponse;
 import org.apache.solr.common.SolrDocumentList;
@@ -27,11 +28,12 @@ public class SolrDaoImpl implements SolrDao {
 	public List<News> listNews(int start, int pageSize, int newscategory,
 			int isShow) {
 		SolrQuery query=new SolrQuery();
-		query.setQuery("newscategory:"+newscategory);
+		query.setQuery("newscategory:"+newscategory+" AND isShow:"+isShow);
 		query.addField("title");
 		query.addField("id");
 		query.setStart(start);
 		query.setRows(pageSize);
+		query.setSort("premiereDate", ORDER.desc);
 		List<News> news=new ArrayList<News>();
 		QueryResponse response=null;
 		try {
@@ -87,6 +89,37 @@ public class SolrDaoImpl implements SolrDao {
 				if(docs.get(0).getFieldValue("premiereDate")!=null){
 					news.setPremiereDate(Long.parseLong(docs.get(i).getFieldValue("premiereDate").toString()));
 				}
+			}
+		} catch (SolrServerException e) {
+			e.printStackTrace();
+		}
+		return news;
+	}
+
+	@Override
+	public List<News> searchNewsByKeyword(int start, int pageSize,
+			String keyword, int isShow) {
+		SolrQuery query=new SolrQuery();
+		query.setQuery("title:"+keyword+" OR summary:"+keyword+" OR content:"+keyword);
+		query.addField("title");
+		query.addField("id");
+		query.setStart(start);
+		query.setRows(pageSize);
+		query.setSort("premiereDate", ORDER.desc);
+		QueryResponse response=null;
+		List<News> news=new ArrayList<News>();
+		try {
+			response=getSolrServer().query(query);
+			SolrDocumentList docs=response.getResults();
+			for (int i = 0; i < docs.size(); i++) {
+				News n=new News();
+				if(docs.get(i).getFieldValue("title")!=null){
+					n.setTitle(docs.get(i).getFieldValue("title").toString());
+				}
+				if(docs.get(i).getFieldValue("id")!=null){
+					n.setId(docs.get(i).getFieldValue("id").toString());
+				}
+				news.add(n);
 			}
 		} catch (SolrServerException e) {
 			e.printStackTrace();

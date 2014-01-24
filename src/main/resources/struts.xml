@@ -71,7 +71,7 @@
 		</action>
 		<!--UserInfo end!-->
 		
-		<!--UserInfo start!-->	
+		<!--News start!-->	
 		<action name="listnews" class="com.stardream.project.photography.action.ListNewsAction" method="listnews">
 			<result name="success">/listnews.jsp</result>
 			<result name="error">/error.jsp</result>
@@ -81,7 +81,12 @@
 			<result name="success">/newsdetail.jsp</result>
 			<result name="error">/error.jsp</result>
 		</action>
-		<!--UserInfo end!-->
+		
+		<action name="searchNewsByKeyword" class="com.stardream.project.photography.action.SearchNewsAction" method="searchNewsByKeyword">
+			<result name="success">/searchnews.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--News end!-->
 	</package>
 	
 </struts>

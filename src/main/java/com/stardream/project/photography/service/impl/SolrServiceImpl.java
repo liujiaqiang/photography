@@ -27,4 +27,10 @@ public class SolrServiceImpl implements SolrService {
 	public News getNewsById(String id) {
 		return solrDao.getNewsById(id);
 	}
+
+	@Override
+	public List<News> searchNewsByKeyword(int start, int pageSize,
+			String keyword, int isShow) {
+		return solrDao.searchNewsByKeyword(start, pageSize, keyword, isShow);
+	}
 }

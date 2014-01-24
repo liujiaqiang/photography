@@ -22,3 +22,18 @@ function selectCategory(){
 		}
 	}
 }
+
+function checksearch() {
+	var searchs = document.getElementsByName("search");
+	for ( var i = 0; i < searchs.length; i++) {
+		if (searchs[0].checked == true) {
+			$("#myform").attr("action", "searchNewsByKeyword.shtml");
+			return true;
+		}
+		if (searchs[1].checked == true) {
+			$("#myform").attr("action", "http://www.baidu.com/baidu");
+			return true;
+		}
+	}
+	return false;
+}
