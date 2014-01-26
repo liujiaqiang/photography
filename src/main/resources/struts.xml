@@ -82,6 +82,11 @@
 			<result name="error">/error.jsp</result>
 		</action>
 		
+		<action name="getnewsdetail" class="com.stardream.project.photography.action.getNewsDetailAction" method="newsdetail">
+			<result name="success">/newsdetail.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		
 		<action name="searchNewsByKeyword" class="com.stardream.project.photography.action.SearchNewsAction" method="searchNewsByKeyword">
 			<result name="success">/searchnews.jsp</result>
 			<result name="error">/error.jsp</result>
