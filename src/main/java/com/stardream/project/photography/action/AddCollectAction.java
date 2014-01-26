@@ -11,8 +11,8 @@ import com.stardream.project.photography.service.GenericService;
 
 public class AddCollectAction {
 
-	private Integer userId;
-	private Integer worksId;
+	private Integer user;
+	private Integer photoId;
 	private long dateTime;
 	private String errormessage;
 
@@ -21,8 +21,8 @@ public class AddCollectAction {
 
 	public String addcollect() {
 		Collect collect = new Collect();
-		collect.setUserId(userId);
-		collect.setWorksId(worksId);
+		collect.setUser(user);
+		collect.setPhotoId(photoId);
 		collect.setDateTime(new Date().getTime());
 		try {
 			collectService.saveorupdate(collect);
@@ -35,21 +35,31 @@ public class AddCollectAction {
 		return Action.SUCCESS;
 	}
 
-	public Integer getUserId() {
-		return userId;
+	
+
+	public Integer getUser() {
+		return user;
 	}
 
-	public void setUserId(Integer userId) {
-		this.userId = userId;
+
+
+	public void setUser(Integer user) {
+		this.user = user;
 	}
 
-	public Integer getWorksId() {
-		return worksId;
+
+
+	public Integer getPhotoId() {
+		return photoId;
 	}
 
-	public void setWorksId(Integer worksId) {
-		this.worksId = worksId;
+
+
+	public void setPhotoId(Integer photoId) {
+		this.photoId = photoId;
 	}
+
+
 
 	public long getDateTime() {
 		return dateTime;

@@ -9,44 +9,45 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * 资讯分类表
+ * 影展分类
+ * 用于制定作品的分类
  * @author duyanjun
  *
  */
 @SuppressWarnings("serial")
 @Entity
-@Table(name="t_news_category")
-public class NewsCategory implements Serializable {
-	
+@Table(name = "t_ photoClassify")
+public class PhotoClassify implements Serializable {
 	private Integer id;
 	private String name;
-	private String description;
-	private String alternateField;
+	private String remark;
+
+
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public Integer getId() {
 		return id;
 	}
+
 	public void setId(Integer id) {
 		this.id = id;
 	}
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getDescription() {
-		return description;
+
+	public String getRemark() {
+		return remark;
 	}
-	public void setDescription(String description) {
-		this.description = description;
+
+	public void setRemark(String remark) {
+		this.remark = remark;
 	}
-	public String getAlternateField() {
-		return alternateField;
-	}
-	public void setAlternateField(String alternateField) {
-		this.alternateField = alternateField;
-	}
-	
+
+
 }

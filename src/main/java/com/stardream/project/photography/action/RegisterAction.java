@@ -11,7 +11,6 @@ import com.stardream.project.photography.service.GenericService;
 
 public class RegisterAction {
 
-	private String username;
 	private String nickname;
 	private String realname;
 	private String userpass;
@@ -22,14 +21,16 @@ public class RegisterAction {
 	private long dateTime;
 	private int islock;
 	private String errormessage;
+	private int level;
+	private int ismanager; //是否是论坛管理员
+	private String alternateField1;
+	private String alternateField2;
 
 	@Autowired
 	private GenericService<UserInfo, Integer> userService;
 
 	public String register() {
 		UserInfo userInfo=new UserInfo();
-		userInfo.setUsername(username);
-		userInfo.setUserpass(userpass);
 		userInfo.setNickname(nickname);
 		userInfo.setRealname(realname);
 		userInfo.setEmail(email);
@@ -38,6 +39,10 @@ public class RegisterAction {
 		userInfo.setImgUrl(imgUrl);
 		userInfo.setDateTime(new Date().getTime());
 		userInfo.setIslock(islock);
+		userInfo.setAlternateField1(alternateField1);
+		userInfo.setAlternateField2(alternateField2);
+		userInfo.setLevel(level);
+		userInfo.setIsmanager(ismanager);
 		try {
 			userService.saveorupdate(userInfo);
 		} catch (Exception e) {
@@ -47,14 +52,6 @@ public class RegisterAction {
 			return "error";
 		}
 		return Action.SUCCESS;
-	}
-
-	public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
 	}
 
 	public String getNickname() {
@@ -135,6 +132,38 @@ public class RegisterAction {
 
 	public void setErrormessage(String errormessage) {
 		this.errormessage = errormessage;
+	}
+
+	public int getLevel() {
+		return level;
+	}
+
+	public void setLevel(int level) {
+		this.level = level;
+	}
+
+	public int getIsmanager() {
+		return ismanager;
+	}
+
+	public void setIsmanager(int ismanager) {
+		this.ismanager = ismanager;
+	}
+
+	public String getAlternateField1() {
+		return alternateField1;
+	}
+
+	public void setAlternateField1(String alternateField1) {
+		this.alternateField1 = alternateField1;
+	}
+
+	public String getAlternateField2() {
+		return alternateField2;
+	}
+
+	public void setAlternateField2(String alternateField2) {
+		this.alternateField2 = alternateField2;
 	}
 
 }

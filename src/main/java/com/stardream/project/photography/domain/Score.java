@@ -9,44 +9,54 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * 资讯分类表
+ * 积分表
+ * 用于存储用户的积分信息
  * @author duyanjun
  *
  */
 @SuppressWarnings("serial")
 @Entity
-@Table(name="t_news_category")
-public class NewsCategory implements Serializable {
-	
+@Table(name = "t_score")
+public class Score implements Serializable {
 	private Integer id;
-	private String name;
-	private String description;
+	private Integer user;
+	private Integer count;
 	private String alternateField;
+
+
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public Integer getId() {
 		return id;
 	}
+
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public String getName() {
-		return name;
+
+	public Integer getUser() {
+		return user;
 	}
-	public void setName(String name) {
-		this.name = name;
+
+	public void setUser(Integer user) {
+		this.user = user;
 	}
-	public String getDescription() {
-		return description;
+
+	public Integer getCount() {
+		return count;
 	}
-	public void setDescription(String description) {
-		this.description = description;
+
+	public void setCount(Integer count) {
+		this.count = count;
 	}
+
 	public String getAlternateField() {
 		return alternateField;
 	}
+
 	public void setAlternateField(String alternateField) {
 		this.alternateField = alternateField;
 	}
 	
+
 }

@@ -14,9 +14,10 @@ public class AddLinksAction {
 	private String name;
 	private String address;
 	private String imgUrl;
-	private int isShow;
 	private long dateTime;
 	private String errormessage;
+	private int status;
+	private String alternateField;
 
 	@Autowired
 	private GenericService<Links, Integer> linksService;
@@ -27,7 +28,8 @@ public class AddLinksAction {
 		links.setDateTime(new Date().getTime());
 		links.setImgUrl(imgUrl);
 		links.setName(name);
-		links.setIsShow(isShow);
+		links.setStatus(status);
+		links.setAlternateField(alternateField);
 		try {
 			linksService.saveorupdate(links);
 		} catch (Exception e) {
@@ -63,12 +65,21 @@ public class AddLinksAction {
 		this.imgUrl = imgUrl;
 	}
 
-	public int getIsShow() {
-		return isShow;
+
+	public int getStatus() {
+		return status;
 	}
 
-	public void setIsShow(int isShow) {
-		this.isShow = isShow;
+	public void setStatus(int status) {
+		this.status = status;
+	}
+
+	public String getAlternateField() {
+		return alternateField;
+	}
+
+	public void setAlternateField(String alternateField) {
+		this.alternateField = alternateField;
 	}
 
 	public long getDateTime() {

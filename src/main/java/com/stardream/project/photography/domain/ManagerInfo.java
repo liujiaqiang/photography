@@ -9,14 +9,14 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * 用户信息表
+ * 系统管理员信息表
  * @author duyanjun
  *
  */
 @SuppressWarnings("serial")
 @Entity
-@Table(name = "t_user")
-public class UserInfo implements Serializable {
+@Table(name = "t_manager")
+public class ManagerInfo implements Serializable {
 	private Integer id;
 	private String nickname;
 	private String realname;
@@ -26,9 +26,6 @@ public class UserInfo implements Serializable {
 	private String birthday;
 	private String imgUrl;
 	private long dateTime;
-	private int islock;
-	private int level;
-	private int ismanager; //是否是论坛管理员
 	private String alternateField1;
 	private String alternateField2;
 
@@ -106,29 +103,6 @@ public class UserInfo implements Serializable {
 		this.dateTime = dateTime;
 	}
 
-	public int getIslock() {
-		return islock;
-	}
-
-	public void setIslock(int islock) {
-		this.islock = islock;
-	}
-
-	public int getLevel() {
-		return level;
-	}
-
-	public void setLevel(int level) {
-		this.level = level;
-	}
-
-	public int getIsmanager() {
-		return ismanager;
-	}
-
-	public void setIsmanager(int ismanager) {
-		this.ismanager = ismanager;
-	}
 
 	public String getAlternateField1() {
 		return alternateField1;

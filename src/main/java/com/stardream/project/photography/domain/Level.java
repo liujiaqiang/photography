@@ -9,44 +9,43 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * 资讯分类表
+ * 级别表
+ * 用于制定用户的级别
  * @author duyanjun
  *
  */
 @SuppressWarnings("serial")
 @Entity
-@Table(name="t_news_category")
-public class NewsCategory implements Serializable {
-	
+@Table(name = "t_level")
+public class Level implements Serializable {
 	private Integer id;
 	private String name;
-	private String description;
-	private String alternateField;
+	private String destiction;
+
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public Integer getId() {
 		return id;
 	}
+
 	public void setId(Integer id) {
 		this.id = id;
 	}
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getDescription() {
-		return description;
+
+	public String getDestiction() {
+		return destiction;
 	}
-	public void setDescription(String description) {
-		this.description = description;
+
+	public void setDestiction(String destiction) {
+		this.destiction = destiction;
 	}
-	public String getAlternateField() {
-		return alternateField;
-	}
-	public void setAlternateField(String alternateField) {
-		this.alternateField = alternateField;
-	}
-	
+
 }

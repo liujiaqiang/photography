@@ -16,6 +16,9 @@ public class Friend implements Serializable {
 	private Integer friendId;
 	private Integer userId;
 	private long dateTime;
+	private Integer status;
+	private String alternateField;
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	public Integer getId() {
@@ -42,4 +45,17 @@ public class Friend implements Serializable {
 	public void setDateTime(long dateTime) {
 		this.dateTime = dateTime;
 	}
+	public Integer getStatus() {
+		return status;
+	}
+	public void setStatus(Integer status) {
+		this.status = status;
+	}
+	public String getAlternateField() {
+		return alternateField;
+	}
+	public void setAlternateField(String alternateField) {
+		this.alternateField = alternateField;
+	}
+	
 }

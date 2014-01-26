@@ -2,7 +2,6 @@ package com.stardream.project.photography.action;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-
 import com.opensymphony.xwork2.Action;
 import com.stardream.project.photography.domain.NewsCategory;
 import com.stardream.project.photography.exception.PhotoGraphyException;
@@ -15,6 +14,7 @@ public class AddNewsCategoryAction {
 	private String name;
 	private String description;
 	private String errormessage;
+	private String alternateField;
 	
 	@Autowired
 	private GenericService<NewsCategory, Integer> newsCategoryService;
@@ -23,6 +23,7 @@ public class AddNewsCategoryAction {
 		NewsCategory newsCategory=new NewsCategory();
 		newsCategory.setName(name);
 		newsCategory.setDescription(description);
+		newsCategory.setAlternateField(alternateField);
 		try {
 			newsCategoryService.saveorupdate(newsCategory);
 		} catch (Exception e) {
@@ -54,4 +55,14 @@ public class AddNewsCategoryAction {
 	public void setErrormessage(String errormessage) {
 		this.errormessage = errormessage;
 	}
+
+	public String getAlternateField() {
+		return alternateField;
+	}
+
+	public void setAlternateField(String alternateField) {
+		this.alternateField = alternateField;
+	}
+	
+	
 }

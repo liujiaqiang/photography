@@ -14,6 +14,8 @@ public class AddFriendAction {
 	private Integer userId;
 	private Integer friendId;
 	private long dateTime;
+	private Integer status;
+	private String alternateField;
 	private String errormessage;
 
 	@Autowired
@@ -24,6 +26,9 @@ public class AddFriendAction {
 		friend.setUserId(userId);
 		friend.setFriendId(friendId);
 		friend.setDateTime(new Date().getTime());
+		friend.setStatus(status);
+		friend.setAlternateField(alternateField); 
+		
 		try {
 			friendService.saveorupdate(friend);
 		} catch (Exception e) {
@@ -67,4 +72,21 @@ public class AddFriendAction {
 		this.errormessage = errormessage;
 	}
 
+	public Integer getStatus() {
+		return status;
+	}
+
+	public void setStatus(Integer status) {
+		this.status = status;
+	}
+
+	public String getAlternateField() {
+		return alternateField;
+	}
+
+	public void setAlternateField(String alternateField) {
+		this.alternateField = alternateField;
+	}
+
+	
 }

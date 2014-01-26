@@ -17,7 +17,9 @@ public class Links  implements Serializable{
 	private String address;
 	private String imgUrl;
 	private long dateTime;
-	private int isShow;
+	private int status;
+	private String alternateField;
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	public Integer getId() {
@@ -50,10 +52,17 @@ public class Links  implements Serializable{
 	public void setDateTime(long dateTime) {
 		this.dateTime = dateTime;
 	}
-	public int getIsShow() {
-		return isShow;
+	public int getStatus() {
+		return status;
 	}
-	public void setIsShow(int isShow) {
-		this.isShow = isShow;
+	public void setStatus(int status) {
+		this.status = status;
 	}
+	public String getAlternateField() {
+		return alternateField;
+	}
+	public void setAlternateField(String alternateField) {
+		this.alternateField = alternateField;
+	}
+	
 }
