@@ -16,7 +16,7 @@ import javax.persistence.Table;
  */
 @SuppressWarnings("serial")
 @Entity
-@Table(name = "t_ forum_comment")
+@Table(name = "t_forum_comment")
 public class ForumComment implements Serializable {
 	private Integer id;
 	private Integer forumId;

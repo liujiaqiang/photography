@@ -16,7 +16,7 @@ import javax.persistence.Table;
  */
 @SuppressWarnings("serial")
 @Entity
-@Table(name = "t_ photography")
+@Table(name = "t_photography")
 public class Photography implements Serializable {
 	private Integer id;
 	private String name;
