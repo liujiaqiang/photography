@@ -18,6 +18,7 @@ import javax.persistence.Table;
 @Table(name = "t_manager")
 public class ManagerInfo implements Serializable {
 	private Integer id;
+	private Integer managername;
 	private String nickname;
 	private String realname;
 	private String password;
@@ -37,6 +38,16 @@ public class ManagerInfo implements Serializable {
 
 	public void setId(Integer id) {
 		this.id = id;
+	}
+	
+	
+
+	public Integer getManagername() {
+		return managername;
+	}
+
+	public void setManagername(Integer managername) {
+		this.managername = managername;
 	}
 
 	public String getNickname() {

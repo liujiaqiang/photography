@@ -2,6 +2,7 @@ package com.stardream.project.photography.domain;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,18 +19,30 @@ import javax.persistence.Table;
 @Table(name = "t_user")
 public class UserInfo implements Serializable {
 	private Integer id;
+	@Column(length=20)
+	private String username;
+	@Column(length=20)
 	private String nickname;
+	
+	@Column(length=20)
 	private String realname;
+	@Column(length=20)
 	private String password;
+	@Column(length=50)
 	private String email;
+	@Column(length=20)
 	private String phone;
+	@Column(length=20)
 	private String birthday;
+	@Column(length=50)
 	private String imgUrl;
 	private long dateTime;
 	private int islock;
 	private int level;
 	private int ismanager; //是否是论坛管理员
+	@Column(length=20)
 	private String alternateField1;
+	@Column(length=20)
 	private String alternateField2;
 
 	@Id
@@ -40,6 +53,14 @@ public class UserInfo implements Serializable {
 
 	public void setId(Integer id) {
 		this.id = id;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	public String getNickname() {

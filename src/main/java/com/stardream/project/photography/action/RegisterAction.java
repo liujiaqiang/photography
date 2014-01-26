@@ -11,6 +11,7 @@ import com.stardream.project.photography.service.GenericService;
 
 public class RegisterAction {
 
+	private String username;
 	private String nickname;
 	private String realname;
 	private String userpass;
@@ -31,6 +32,7 @@ public class RegisterAction {
 
 	public String register() {
 		UserInfo userInfo=new UserInfo();
+		userInfo.setUsername(username);
 		userInfo.setNickname(nickname);
 		userInfo.setRealname(realname);
 		userInfo.setEmail(email);
@@ -52,6 +54,14 @@ public class RegisterAction {
 			return "error";
 		}
 		return Action.SUCCESS;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	public String getNickname() {
