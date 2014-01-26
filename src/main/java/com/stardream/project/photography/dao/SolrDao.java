@@ -7,6 +7,8 @@ import com.stardream.project.photography.domain.News;
 public interface SolrDao {
 	
 	public List<News> listNews(int start, int pageSize,int newscategory,int isShow) ;
+	
+	public List<News> listNews(int start, int pageSize) ;
 
 	public News getNewsById(String id) ;
 	

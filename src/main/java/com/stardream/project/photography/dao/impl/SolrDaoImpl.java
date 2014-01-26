@@ -29,8 +29,9 @@ public class SolrDaoImpl implements SolrDao {
 			int isShow) {
 		SolrQuery query=new SolrQuery();
 		query.setQuery("newscategory:"+newscategory+" AND isShow:"+isShow);
-		query.addField("title");
 		query.addField("id");
+		query.addField("title");
+		query.addField("premiereDate");
 		query.setStart(start);
 		query.setRows(pageSize);
 		query.setSort("premiereDate", ORDER.desc);
@@ -46,6 +47,9 @@ public class SolrDaoImpl implements SolrDao {
 				}
 				if(docs.get(i).getFieldValue("id")!=null){
 					n.setId(docs.get(i).getFieldValue("id").toString());
+				}
+				if(docs.get(0).getFieldValue("premiereDate")!=null){
+					n.setPremiereDate(Long.parseLong(docs.get(i).getFieldValue("premiereDate").toString()));
 				}
 				news.add(n);
 			}
@@ -101,8 +105,9 @@ public class SolrDaoImpl implements SolrDao {
 			String keyword, int isShow) {
 		SolrQuery query=new SolrQuery();
 		query.setQuery("title:"+keyword+" OR summary:"+keyword+" OR content:"+keyword);
-		query.addField("title");
 		query.addField("id");
+		query.addField("title");
+		query.addField("premiereDate");
 		query.setStart(start);
 		query.setRows(pageSize);
 		query.setSort("premiereDate", ORDER.desc);
@@ -118,6 +123,43 @@ public class SolrDaoImpl implements SolrDao {
 				}
 				if(docs.get(i).getFieldValue("id")!=null){
 					n.setId(docs.get(i).getFieldValue("id").toString());
+				}
+				if(docs.get(0).getFieldValue("premiereDate")!=null){
+					n.setPremiereDate(Long.parseLong(docs.get(i).getFieldValue("premiereDate").toString()));
+				}
+				news.add(n);
+			}
+		} catch (SolrServerException e) {
+			e.printStackTrace();
+		}
+		return news;
+	}
+
+	@Override
+	public List<News> listNews(int start, int pageSize) {
+		SolrQuery query=new SolrQuery();
+		query.setQuery("*:*");
+		query.addField("id");
+		query.addField("title");
+		query.addField("premiereDate");
+		query.setStart(start);
+		query.setRows(pageSize);
+		query.setSort("premiereDate", ORDER.desc);
+		List<News> news=new ArrayList<News>();
+		QueryResponse response=null;
+		try {
+			response=getSolrServer().query(query);
+			SolrDocumentList docs=response.getResults();
+			for (int i = 0; i < docs.size(); i++) {
+				News n=new News();
+				if(docs.get(i).getFieldValue("title")!=null){
+					n.setTitle(docs.get(i).getFieldValue("title").toString());
+				}
+				if(docs.get(i).getFieldValue("id")!=null){
+					n.setId(docs.get(i).getFieldValue("id").toString());
+				}
+				if(docs.get(0).getFieldValue("premiereDate")!=null){
+					n.setPremiereDate(Long.parseLong(docs.get(i).getFieldValue("premiereDate").toString()));
 				}
 				news.add(n);
 			}

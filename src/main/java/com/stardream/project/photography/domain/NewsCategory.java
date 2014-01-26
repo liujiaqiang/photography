@@ -1,12 +1,14 @@
 package com.stardream.project.photography.domain;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 /**
  * 资讯分类表
@@ -21,6 +23,7 @@ public class NewsCategory implements Serializable {
 	private Integer id;
 	private String name;
 	private String description;
+	private long dateTime;
 	private String alternateField;
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -48,5 +51,14 @@ public class NewsCategory implements Serializable {
 	public void setAlternateField(String alternateField) {
 		this.alternateField = alternateField;
 	}
-	
+	public long getDateTime() {
+		return dateTime;
+	}
+	public void setDateTime(long dateTime) {
+		this.dateTime = dateTime;
+	}
+	@Transient
+	public Date getCurrentDate() {
+		return new Date(this.dateTime);
+	}
 }

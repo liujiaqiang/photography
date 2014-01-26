@@ -20,13 +20,18 @@
 		</global-exception-mappings>
 		
 		<!--NewsCategory start!-->	
-		<action name="addCategory" class="com.stardream.project.photography.action.AddNewsCategoryAction" method="addCategory">
+		<action name="addcategory" class="com.stardream.project.photography.action.AddNewsCategoryAction" method="addCategory">
 			<result name="success">/success.jsp</result>
 			<result name="error">/error.jsp</result>
 		</action>
 		
-		<action name="listCategory" class="com.stardream.project.photography.action.ListNewsCategoryAction" method="listCategory">
+		<action name="listcategory" class="com.stardream.project.photography.action.ListNewsCategoryAction" method="listCategory">
 			<result name="success">/selectCategory.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="listnewscategory" class="com.stardream.project.photography.action.ListNewsCategoryAction" method="listCategory">
+			<result name="success">/adminright.jsp</result>
 			<result name="error">/error.jsp</result>
 		</action>
 		<!--NewsCategory end!-->
@@ -73,6 +78,11 @@
 		
 		<!--News start!-->	
 		<action name="listnews" class="com.stardream.project.photography.action.ListNewsAction" method="listnews">
+			<result name="success">/listnews.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="listallnews" class="com.stardream.project.photography.action.ListAllNewsAction" method="listnews">
 			<result name="success">/listnews.jsp</result>
 			<result name="error">/error.jsp</result>
 		</action>

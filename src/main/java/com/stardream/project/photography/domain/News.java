@@ -1,6 +1,7 @@
 package com.stardream.project.photography.domain;
 
 import java.io.Serializable;
+import java.util.Date;
 
 @SuppressWarnings("serial")
 public class News implements Serializable {
@@ -52,5 +53,8 @@ public class News implements Serializable {
 	}
 	public void setContent(String content) {
 		this.content = content;
+	}
+	public Date getCurrentDate() {
+		return new Date(this.premiereDate);
 	}
 }

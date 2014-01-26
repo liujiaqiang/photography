@@ -33,4 +33,9 @@ public class SolrServiceImpl implements SolrService {
 			String keyword, int isShow) {
 		return solrDao.searchNewsByKeyword(start, pageSize, keyword, isShow);
 	}
+
+	@Override
+	public List<News> listNews(int start, int pageSize) {
+		return solrDao.listNews(start, pageSize);
+	}
 }

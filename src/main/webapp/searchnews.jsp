@@ -35,7 +35,7 @@
 				<s:iterator value="news" var="mnews">
 					<li><a
 						href="newsdetail.shtml?id=<s:property value="#mnews.id"/>"
-						target="_blank"><s:property value="#mnews.title" /></a></li>
+						target="_blank"><s:property value="#mnews.title" />&nbsp;&nbsp;&nbsp;&nbsp;(<s:date name="currentDate" format="yyyy/MM/dd/HH:mm"/>)</a></li>
 				</s:iterator>
 			</ul>  
 	    </div> <!-- end of content -->

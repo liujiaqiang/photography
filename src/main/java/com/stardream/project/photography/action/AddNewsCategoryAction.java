@@ -1,5 +1,7 @@
 package com.stardream.project.photography.action;
 
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.opensymphony.xwork2.Action;
@@ -23,6 +25,7 @@ public class AddNewsCategoryAction {
 		NewsCategory newsCategory=new NewsCategory();
 		newsCategory.setName(name);
 		newsCategory.setDescription(description);
+		newsCategory.setDateTime(new Date().getTime());
 		newsCategory.setAlternateField(alternateField);
 		try {
 			newsCategoryService.saveorupdate(newsCategory);
