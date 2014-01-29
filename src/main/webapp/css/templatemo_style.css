@@ -106,7 +106,11 @@ form {
 }
 
 /* end of form */
-
+#templatemo_header_login{
+	width:100%;
+	margin: 0 auto;
+	text-align: right;
+}
 
 #templatemo_header_panel {
 	width:100%;

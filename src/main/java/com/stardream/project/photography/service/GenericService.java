@@ -24,7 +24,7 @@ public interface GenericService<T, K extends Serializable> {
 	public List<T> findEntity(Class<T> clazz,K id) throws Exception ;
 	
 	public List<T> findEntityBySQL(Class<T> clazz,String sql);
-	
+		
 	public void updateEntity(String name, K id);
 	
 	public void deleteEntity(Class<T> clazz, K id);

@@ -12,6 +12,10 @@
 <jsp:include page="include.jsp" />
 </head>
 <body>
+    <div id="templatemo_header_login">
+      <a href="http://localhost/photography/login.jsp" class="toc">登录</a>
+      <a href="http://localhost/photography/registerSimple.jsp" class="toc">注册</a>
+    </div>
 	<div id="templatemo_header_panel">
     	<div id="templatemo_header_section">
             <div id="templatemo_title_section">

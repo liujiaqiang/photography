@@ -67,6 +67,10 @@
 			<result name="success">/success.jsp</result>
 			<result name="error">/error.jsp</result>
 		</action>
+		<action name="login" class="com.stardream.project.photography.LoginActivity" method="login">
+			<result name="success">/index.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
 		<!--UserInfo end!-->
 		
 		<!--UserInfo start!-->	
