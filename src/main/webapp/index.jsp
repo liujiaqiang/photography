@@ -12,17 +12,9 @@
 <jsp:include page="include.jsp" />
 </head>
 <body>
-
     <div id="templatemo_header_login">
-     <s:if test="#session.nickName==null">
-      <a href="<%=request.getContextPath()%>/login.jsp" class="toc">登录</a>
-      <a href="<%=request.getContextPath()%>/registerSimple.jsp" class="toc">注册</a>
-     </s:if>
-     <s:else>
-       <s:property value="#session.nickName"></s:property>
-       <a href="<%=request.getContextPath()%>/loginExit.shtml">退出登录</a>
-       <font ></font>
-     </s:else>
+      <a href="http://localhost/photography/login.jsp" class="toc">登录</a>
+      <a href="http://localhost/photography/registerSimple.jsp" class="toc">注册</a>
     </div>
 	<div id="templatemo_header_panel">
     	<div id="templatemo_header_section">

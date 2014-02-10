@@ -64,16 +64,10 @@
 		
 		<!--UserInfo start!-->	
 		<action name="register" class="com.stardream.project.photography.action.RegisterAction" method="register">
-			<result name="success">/login.jsp</result>
+			<result name="success">/success.jsp</result>
 			<result name="error">/error.jsp</result>
 		</action>
 		<action name="login" class="com.stardream.project.photography.LoginActivity" method="login">
-			<result name="success">/index.jsp</result>
-			<result name="loginError">/login.jsp</result>
-			<result name="error">/error.jsp</result>
-		</action>
-		
-		<action name="loginExit" class="com.stardream.project.photography.LoginActivity" method="loginExit">
 			<result name="success">/index.jsp</result>
 			<result name="error">/error.jsp</result>
 		</action>

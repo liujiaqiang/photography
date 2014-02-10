@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -81,15 +80,10 @@
 	              <td><input name="userpass" type="password"><br></td>
 	            </tr> 
 	            <tr>
-	                <td colspan="2" align="center"><input value="提交"  type="submit"><a href="<%=request.getContextPath()%>/registerSimple.jsp">注册</a></td>
+	                <td colspan="2" align="center"><input value="提交"  type="submit"><a href="">注册</a></td>
 	            </tr>
 	            <tr>
 	                <td colspan="2" align="center"><a href="#">忘记密码</a></td>
-	            </tr>
-	            <tr>
-	              <s:if test="#request.errorMessage!=null">
-	                <td colspan="2" align="center"><font color="red"><s:property value="#request.errorMessage"></s:property></font></td>
-	              </s:if>
 	            </tr>
 	          </table>
 	        </form>
@@ -97,7 +91,7 @@
         </div>
     </div>   
 	
-	<div id="templatemo_footer_panel">
+	    <div id="templatemo_footer_panel">
     	<div id="templatemo_footer_section">
 			Copyright © 2014 <a href="#">三边摄影网</a>
         </div>
