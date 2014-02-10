@@ -2,6 +2,10 @@ package com.stardream.project.photography.action;
 
 import java.util.Date;
 
+import javax.servlet.ServletRequest;
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.struts2.ServletActionContext;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.opensymphony.xwork2.Action;
@@ -31,10 +35,15 @@ public class RegisterAction {
 	private GenericService<UserInfo, Integer> userService;
 
 	public String register() {
+		
+		ServletRequest arg = ServletActionContext.getRequest();
+		HttpServletRequest request = (HttpServletRequest)arg;
+		
 		UserInfo userInfo=new UserInfo();
 		userInfo.setUsername(username);
 		userInfo.setNickname(nickname);
-		userInfo.setRealname(realname);
+		userInfo.setRealname(realname); 
+		userInfo.setPassword(userpass);
 		userInfo.setEmail(email);
 		userInfo.setPhone(phone);
 		userInfo.setBirthday(birthday);
@@ -53,6 +62,8 @@ public class RegisterAction {
 			e.printStackTrace();
 			return "error";
 		}
+		
+		request.setAttribute("errorMessage", "注册成功，请您登录"); 
 		return Action.SUCCESS;
 	}
 
