@@ -135,7 +135,7 @@
     		emailF.innerText = "正确";
     		
     	}else if(email == ""){
-    		emailF.innerText = "您没有填写邮箱";
+    		emailF.innerText = "";
     	}else{
     		emailF.innerText = "邮箱格式不正确,请重新输入";
     		return false;
@@ -149,11 +149,12 @@
     	var pattern=/(^[0-9]{3,4}\-[0-9]{3,8}$)|(^[0-9]{3,8}$)|(^\([0-9]{3,4}\)[0-9]{3,8}$)|(^0{0,1}13[0-9]{9}$)/; 
     	if(pattern.test(phone)){
     		phoneF.innerText = "电话格式正确";
-    		return false;
+    		
     	}else if(phone == ""){  
-    		phoneF.innerText = "您没有填写电话";
+    		phoneF.innerText = "";
     	}else{
     		phoneF.innerText = "电话格式不正确";
+    		return false;
     	}
     	return true;
     }
