@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>简易注册</title>
+<title>管理员注册</title>
 <link rel="stylesheet" type="text/css" href="css/contentslider.css" />
 <script type="text/javascript" src="js/contentslider.js">
 </script>
@@ -37,7 +37,7 @@
         <form action="register.shtml" method="post">
 	        <table>
 	          <tr>
-	              <td>用户名:</td>
+	              <td>管理员用户名:</td>
 	              <td><input name="username" type="text" id="username" onblur="chkUserName()"></td>
 	              <td align="left"><span style="color: red" id="usernameF">*</span></td>
 	          </tr>
@@ -57,17 +57,35 @@
 	              <td align="left"><span style="color: red" id="nicknameF">*</span></td>
 	          </tr>
 	          <tr>
+	              <td>真实名:</td>
+	              <td><input name="realname" type="text" id="realname" onblur="chkRealname()"></td>
+	              <td align="left"><span style="color: red" id="realnameF">*</span></td>
+	          </tr>
+	          <tr>
+	              <td>生日:</td>
+	              <td><input name="birthday" type="text" id="birthday" onblur="chkBirthday()"></td>
+	              <td align="left"><span style="color: red" id="birthdayF">*</span></td>
+	          </tr>
+	          <tr>
+	              <td>头像:</td>
+	              <td><input name="imgUrl" type="text" id="imgUrl" onblur="chkRmgUrl()"></td>
+	              <td align="left"><span style="color: red" id="imgUrlF">*</span></td>
+	          </tr>
+	          <tr>
 	              <td>Email:</td>
 	              <td><input name="email" type="text" id="email" onblur="chkEmail()"></td>
-	              <td align="left"><span style="color: red" id="emailF"></span></td>
+	              <td align="left"><span style="color: red" id="emailF">*</span></td>
 	          </tr>
 	          <tr>
 	              <td>手机号码:</td>
 	              <td><input name="phone" type="text" id="phone" onblur="chkPhone()"></td>
-	              <td align="left"><span style="color: red" id="phoneF"></span></td>
+	              <td align="left"><span style="color: red" id="phoneF">*</span></td>
 	          </tr>
 	          <tr> 
 	              <td colspan="3" align="center"><input onclick="return chkSub()" value="提交"  type="submit"><input value="重置"  type="reset"></td>
+	          </tr>
+	          <tr> 
+	              <td><input type="hidden" name="ismanager" id="ismanager" value="2"></td>
 	          </tr>
 	        </table>
 	      </form>
@@ -137,8 +155,6 @@
     	if(pattern.test(email)){
     		emailF.innerText = "正确";
     		
-    	}else if(email == ""){
-    		emailF.innerText = "";
     	}else{
     		emailF.innerText = "邮箱格式不正确,请重新输入";
     		return false;
@@ -153,8 +169,6 @@
     	if(pattern.test(phone)){
     		phoneF.innerText = "电话格式正确";
     		
-    	}else if(phone == ""){  
-    		phoneF.innerText = "";
     	}else{
     		phoneF.innerText = "电话格式不正确";
     		return false;

@@ -65,6 +65,7 @@
 		<!--UserInfo start!-->	
 		<action name="register" class="com.stardream.project.photography.action.RegisterAction" method="register">
 			<result name="success">/login.jsp</result>
+			<result name="managerLogin">/managerLogin.jsp</result>
 			<result name="error">/error.jsp</result>
 		</action>
 		<action name="login" class="com.stardream.project.photography.LoginActivity" method="login">
@@ -77,7 +78,18 @@
 			<result name="success">/index.jsp</result>
 			<result name="error">/error.jsp</result>
 		</action>
+		<action name="userNameChk" class="com.stardream.project.photography.LoginActivity" method="UserNameChk">
+		</action>
 		<!--UserInfo end!-->
+		
+		<!--ManagerInfo start!-->	
+		<action name="managerLogin" class="com.stardream.project.photography.action.ManagerAction" method="login">
+			<result name="success">/index.jsp</result>
+			<result name="loginError">/managerLogin.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<!--ManagerInfo end!-->	
 		
 		<!--UserInfo start!-->	
 		<action name="addfriend" class="com.stardream.project.photography.action.AddFriendAction" method="addfriend">

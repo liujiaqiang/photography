@@ -12,6 +12,7 @@ import com.opensymphony.xwork2.Action;
 import com.stardream.project.photography.domain.UserInfo;
 import com.stardream.project.photography.exception.PhotoGraphyException;
 import com.stardream.project.photography.service.GenericService;
+import com.stardream.project.photography.util.Constants;
 
 public class RegisterAction {
 
@@ -27,7 +28,7 @@ public class RegisterAction {
 	private int islock;
 	private String errormessage;
 	private int level;
-	private int ismanager; //是否是论坛管理员
+	private int ismanager; //是否是论坛管理员、系统管理员
 	private String alternateField1;
 	private String alternateField2;
 
@@ -49,10 +50,10 @@ public class RegisterAction {
 		userInfo.setBirthday(birthday);
 		userInfo.setImgUrl(imgUrl);
 		userInfo.setDateTime(new Date().getTime());
-		userInfo.setIslock(islock);
+		userInfo.setIslock(Constants.lock_no);
 		userInfo.setAlternateField1(alternateField1);
 		userInfo.setAlternateField2(alternateField2);
-		userInfo.setLevel(level);
+		userInfo.setLevel(0);
 		userInfo.setIsmanager(ismanager);
 		try {
 			userService.saveorupdate(userInfo);
@@ -64,6 +65,9 @@ public class RegisterAction {
 		}
 		
 		request.setAttribute("errorMessage", "注册成功，请您登录"); 
+		if(ismanager == 2){
+			return "managerLogin";    //系统管理员登录
+		}
 		return Action.SUCCESS;
 	}
 

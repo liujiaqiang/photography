@@ -79,7 +79,13 @@ public class LoginActivity {
 		HttpSession session = request.getSession();
 		
 		session.removeAttribute("nickName");
+		session.removeAttribute("manager");
 		return Action.SUCCESS;
+	}
+	
+	public String UserNameChk(){
+		
+		return null;
 	}
 	public String getUsername() {
 		return username;
