@@ -5,6 +5,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+<link REL="SHORTCUT ICON" HREF="images/favicon.ico" type="image/x-icon" />
 <title>友情链接列表</title>
 </head>
 <body>

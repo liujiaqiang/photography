@@ -7,6 +7,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>三边摄影网</title>
 <link rel="stylesheet" type="text/css" href="css/contentslider.css" />
+<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+<link REL="SHORTCUT ICON" HREF="images/favicon.ico" type="image/x-icon" />
 <script type="text/javascript" src="js/contentslider.js">
 </script>
 <jsp:include page="include.jsp" />

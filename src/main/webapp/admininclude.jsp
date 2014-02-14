@@ -1,4 +1,6 @@
 <link rel="stylesheet" type="text/css" href="css/admin_style.css" />
+<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+<link REL="SHORTCUT ICON" HREF="images/favicon.ico" type="image/x-icon" />
 <script type="text/javascript" src="js/clockp.js"></script>
 <script type="text/javascript" src="js/clockh.js"></script> 
 <script type="text/javascript" src="js/jquery-1.10.1.js"></script>

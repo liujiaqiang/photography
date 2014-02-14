@@ -7,6 +7,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>登录页面</title>
 <link rel="stylesheet" type="text/css" href="css/contentslider.css" />
+<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+<link REL="SHORTCUT ICON" HREF="images/favicon.ico" type="image/x-icon" />
 <script type="text/javascript" src="js/contentslider.js">
 </script>
 </head>

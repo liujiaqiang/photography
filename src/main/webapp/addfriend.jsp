@@ -5,6 +5,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>增加好友</title>
+<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+<link REL="SHORTCUT ICON" HREF="images/favicon.ico" type="image/x-icon" />
 </head>
 <body>
 	<p>此页面仅用于测试</p>

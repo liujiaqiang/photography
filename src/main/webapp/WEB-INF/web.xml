@@ -84,6 +84,13 @@
 		<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
 	</listener>
 	
+	 <!-- 图形验证码开始 -->
+	<servlet>
+	    <servlet-name>authImg</servlet-name>
+	    <servlet-class>com.stardream.project.photography.servlet.RandomCodeServlet</servlet-class>
+	</servlet>
+	 <!-- 图形验证码结束-->
+	
 	<servlet>
 		<servlet-name>ConnectorServlet</servlet-name>
 		<servlet-class>com.ckfinder.connector.ConnectorServlet</servlet-class>
@@ -102,6 +109,13 @@
 		<servlet-name>ConnectorServlet</servlet-name>
 		<url-pattern> /ckfinder/core/connector/java/connector.java </url-pattern>
 	</servlet-mapping>
+	
+	 <!-- 图形验证码开始 -->
+	<servlet-mapping>
+		<servlet-name>authImg</servlet-name>
+		<url-pattern>/authImg</url-pattern>
+	</servlet-mapping>
+	 <!-- 图形验证码结束-->
 	
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
