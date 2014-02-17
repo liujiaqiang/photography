@@ -11,9 +11,9 @@
 <body>
 <div id="main_container">
 	<div class="header">
-    <div class="logo"><a href="#"><img src="images/logo.gif" alt="" title="" border="0" /></a></div>
+    <div class="logo"><a href="#"><img src="../images/logo.gif" alt="" title="" border="0" /></a></div>
     
-    <div class="right_header">欢迎访问<a href="#">三边摄影网</a> | <a href="#" class="messages">(3) 消息</a> | <a href="#" class="logout">注销</a></div>
+    <div class="right_header">欢迎<s:property value="#session.nickName"></s:property>访问<a href="#">三边摄影网</a> | <a href="#" class="messages">(3) 消息</a> | <a href="#" class="logout">注销</a></div>
     <div id="clock_a"></div>
     </div>
     <div class="main_content">

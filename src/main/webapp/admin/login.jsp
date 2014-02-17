@@ -39,7 +39,7 @@
 		</script>
 	</head>
 	<body id="userlogin_body">
-		<form id="loginForm" method="post" action="j_spring_security_check">
+		<form id="loginForm" method="post" action="managerLogin.shtml">
 			<div id="user_login">
 				<dl>
 					<dd id="user_top">
@@ -59,7 +59,7 @@
 											用户名：
 										</li>
 										<li class="user_main_input">
-											<input id="username" name="j_username" class="TxtUserNameCssClass"  maxLength="20" />
+											<input id="username" name="username" class="TxtUserNameCssClass"  maxLength="20" />
 										</li>
 									</ul>
 									<ul>
@@ -67,10 +67,10 @@
 											密 码：
 										</li>
 										<li class="user_main_input">
-											<input id="password" name="j_password"  class="TxtPasswordCssClass" type="password" />
+											<input id="password" name="userpass"  class="TxtPasswordCssClass" type="password" />
 										</li>
 									</ul>
-									<ul>
+									 <ul>
 										<li class="user_main_text">
 											验证码：
 										</li>
@@ -80,7 +80,7 @@
 												<IMG id="identifyingCode" class="identifyingCode" border="0" align="middle" src="../authImg"  alt="换一个">
 											</a>
 										</li>
-									</ul>
+									</ul> 
 									<ul>
 										<li class="user_main_text">
 										</li>

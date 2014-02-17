@@ -39,9 +39,9 @@
 					<td><s:property value="#newsCategory.description"/></td>
 					<td><s:date name="currentDate" format="yyyy/MM/dd/HH:mm"/></td>
 	
-					<td><a href="#"><img src="images/user_edit.png" alt=""
+					<td><a href="#"><img src="../images/user_edit.png" alt=""
 							title="" border="0" /></a></td>
-					<td><a href="#" class="ask"><img src="images/trash.png"
+					<td><a href="#" class="ask"><img src="../images/trash.png"
 							alt="" title="" border="0" /></a></td>
 				</tr>
 			</s:iterator>

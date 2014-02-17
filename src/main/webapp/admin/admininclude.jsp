@@ -1,10 +1,10 @@
-<link rel="stylesheet" type="text/css" href="css/admin_style.css" />
-<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-<link REL="SHORTCUT ICON" HREF="images/favicon.ico" type="image/x-icon" />
-<script type="text/javascript" src="js/clockp.js"></script>
-<script type="text/javascript" src="js/clockh.js"></script> 
-<script type="text/javascript" src="js/jquery-1.10.1.js"></script>
-<script type="text/javascript" src="js/ddaccordion.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/admin_style.css" />
+<link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+<link REL="SHORTCUT ICON" HREF="../images/favicon.ico" type="image/x-icon" />
+<script type="text/javascript" src="../js/clockp.js"></script>
+<script type="text/javascript" src="../js/clockh.js"></script> 
+<script type="text/javascript" src="../js/jquery-1.10.1.js"></script>
+<script type="text/javascript" src="../js/ddaccordion.js"></script>
 <script type="text/javascript">
 ddaccordion.init({
 	headerclass: "submenuheader", //Shared CSS class name of headers group
@@ -17,7 +17,7 @@ ddaccordion.init({
 	animatedefault: false, //Should contents open by default be animated into view?
 	persiststate: true, //persist state of opened contents within browser session?
 	toggleclass: ["", ""], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
-	togglehtml: ["suffix", "<img src='images/plus.gif' class='statusicon' />", "<img src='images/minus.gif' class='statusicon' />"], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+	togglehtml: ["suffix", "<img src='../images/plus.gif' class='statusicon' />", "<img src='../images/minus.gif' class='statusicon' />"], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
 	animatespeed: "fast", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
 	oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
 		//do nothing
@@ -28,7 +28,7 @@ ddaccordion.init({
 })
 </script>
 
-<script type="text/javascript" src="js/jconfirmaction.jquery.js"></script>
+<script type="text/javascript" src="../js/jconfirmaction.jquery.js"></script>
 <script type="text/javascript">
 	
 	$(document).ready(function() {
@@ -37,5 +37,5 @@ ddaccordion.init({
 	
 </script>
 
-<script language="javascript" type="text/javascript" src="js/niceforms.js"></script>
-<link rel="stylesheet" type="text/css" media="all" href="css/niceforms-default.css" />
+<script language="javascript" type="text/javascript" src="../js/niceforms.js"></script>
+<link rel="stylesheet" type="text/css" media="all" href="../css/niceforms-default.css" />

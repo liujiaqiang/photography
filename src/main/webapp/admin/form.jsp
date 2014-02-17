@@ -11,7 +11,7 @@
 	<div id="main_container">
 		<div class="header">
 			<div class="logo">
-				<a href="#"><img src="images/logo.gif" alt="" title=""
+				<a href="#"><img src="../images/logo.gif" alt="" title=""
 					border="0" /></a>
 			</div>
 			<div class="right_header">

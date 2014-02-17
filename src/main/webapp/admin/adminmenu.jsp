@@ -11,5 +11,5 @@
 	<li><a href="admin.jsp">用户管理<!--[if IE 7]><!--></a>
 	<li><a href="admin.jsp">评论管理<!--[if IE 7]><!--></a>
 	<li><a href="addnews.jsp" target="_black">资讯发布<!--[if IE 7]><!--></a>
-	<li><a href="listallnews.jsp" target="_black">资讯列表</a></li>
+	<li><a href="../listallnews.jsp" target="_black">资讯列表</a></li>
 </ul>
