@@ -8,16 +8,16 @@
 <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 <link REL="SHORTCUT ICON" HREF="images/favicon.ico" type="image/x-icon" />
 <title>三边摄像网资讯发布平台</title>
-<script type="text/javascript" src="dojo/1.7.2/dojo/dojo.js"
+<script type="text/javascript" src="../dojo/1.7.2/dojo/dojo.js"
 	djConfig="parseOnLoad: true"></script>
-<link rel="stylesheet" href="css/jquery-ui.css">
+<link rel="stylesheet" href="../css/jquery-ui.css">
 <script type="text/javascript" src="ckeditor_4.3.1/ckeditor.js"></script>
 <script type="text/javascript" src="ckfinder/ckfinder.js"></script>
-<script type="text/javascript" src="js/jquery-1.10.1.js"></script>
-<script type="text/javascript" src="js/jquery-ui.js"></script>
-<script type="text/javascript" src="js/base.js"></script>
-<script type="text/javascript" src="js/validate.js"></script>
-<script type="text/javascript" src="js/photography.js"></script>
+<script type="text/javascript" src="../js/jquery-1.10.1.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.js"></script>
+<script type="text/javascript" src="../js/base.js"></script>
+<script type="text/javascript" src="../js/validate.js"></script>
+<script type="text/javascript" src="../js/photography.js"></script>
 <script type="text/javascript">
     var editor = null;
     window.onload = function() {
@@ -62,11 +62,12 @@
 			</p>
 			<p>
 				类型:<select id="newsCategory" style="width:150px" onchange="selectCategory()" >
-				<option value="1">夏都旅行社活动</option>
-				<option value="2">西部传媒活动</option>
-				<option value="3">协会信息</option>
-				<option value="4">本周影赛排行榜</option>
-				<option value="5">三边文化</option>
+				<option value="1">公告</option>
+				<option value="2">夏都旅行社活动</option>
+				<option value="3">西部传媒活动</option>
+				<option value="4">协会信息</option>
+				<option value="5">本周影赛排行榜</option>
+				<option value="6">三边文化</option>
 			</select><br>
 			</p>
 			<p>

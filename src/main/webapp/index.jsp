@@ -146,7 +146,7 @@
                 	<h2>协会活动资讯</h2>
 					<ul>
                        <s:action name="listnews" namespace="/" executeResult="true">
-                       		<s:param name="newscategory" value="1"></s:param>
+                       		<s:param name="newscategory" value="4"></s:param>
                        </s:action>
                         <li ><a href="listnewscategory.jsp" target="_blank">更多>></a></li>
                     </ul>    
@@ -156,7 +156,7 @@
                 	<h2>夏都旅行社活动</h2>
 					<ul>
                         <s:action name="listnews" namespace="/" executeResult="true">
-                        	<s:param name="newscategory" value="1"></s:param>
+                        	<s:param name="newscategory" value="2"></s:param>
                         </s:action>
                          <li ><a href="listnewscategory.jsp" target="_blank">更多>></a></li>
                     </ul>  
@@ -166,7 +166,7 @@
 	                <h2>西部传媒活动</h2>
                 	<ul>	
                         <s:action name="listnews" namespace="/" executeResult="true">
-                        	<s:param name="newscategory" value="1"></s:param>
+                        	<s:param name="newscategory" value="3"></s:param>
                         </s:action>
                          <li ><a href="listnewscategory.jsp" target="_blank">更多>></a></li>
                     </ul>
@@ -176,7 +176,7 @@
 	                <h2>本周影赛排行榜</h2>
                 	<ul>	
                         <s:action name="listnews" namespace="/" executeResult="true">
-                        	<s:param name="newscategory" value="1"></s:param>
+                        	<s:param name="newscategory" value="5"></s:param>
                         </s:action>
                          <li ><a href="listnewscategory.jsp" target="_blank">更多>></a></li>
                     </ul>
