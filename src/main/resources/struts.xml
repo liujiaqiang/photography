@@ -65,7 +65,7 @@
 		<!--UserInfo start!-->	
 		<action name="register" class="com.stardream.project.photography.action.RegisterAction" method="register">
 			<result name="success">/login.jsp</result>
-			<result name="managerLogin">/managerLogin.jsp</result>
+			<result name="managerLogin">/admin/login.jsp</result>
 			<result name="error">/error.jsp</result>
 		</action>
 		<action name="login" class="com.stardream.project.photography.LoginActivity" method="login">

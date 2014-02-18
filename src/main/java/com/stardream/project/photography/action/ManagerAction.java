@@ -13,6 +13,11 @@ import com.stardream.project.photography.exception.PhotoGraphyException;
 import com.stardream.project.photography.service.ManagerLoginService;
 import com.stardream.project.photography.util.Constants;
 
+/**
+ * 管理员登录类
+ * @author duyanjun
+ *
+ */
 public class ManagerAction {
 	private String username;
 	private String userpass;

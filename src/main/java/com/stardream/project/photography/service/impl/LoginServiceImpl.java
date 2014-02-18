@@ -37,7 +37,7 @@ public class LoginServiceImpl implements LoginService {
 		if(null == userInfo || null == userInfo.getUsername()){
 			return null;
 		}
-		String hql = "FROM UserInfo WHERE username = '"+userInfo.getUsername()+"'";
+		String hql = "FROM UserInfo WHERE username = '"+userInfo.getUsername()+"' and ismanager != 2 ";
 		UserInfo userInfoR = loginDao.findEntityBySQL(userInfo, hql);
 		if(null == userInfoR){
 			return null;

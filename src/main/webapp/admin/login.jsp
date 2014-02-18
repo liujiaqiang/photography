@@ -83,6 +83,14 @@
 									</ul> 
 									<ul>
 										<li class="user_main_text">
+											<a href="#">忘记密码</a>
+										</li>
+										<li class="user_main_input">
+											<a href="<%=request.getContextPath()%>/admin/adminRegister.jsp">注册</a>
+										</li>
+									</ul>
+									<ul>
+										<li class="user_main_text">
 										</li>
 										<li class="user_main_input">
 											<input type="checkbox" name="_spring_security_remember_me " />两周之内不必登陆

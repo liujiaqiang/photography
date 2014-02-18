@@ -40,6 +40,7 @@ public class RegisterAction {
 		ServletRequest arg = ServletActionContext.getRequest();
 		HttpServletRequest request = (HttpServletRequest)arg;
 		
+		
 		UserInfo userInfo=new UserInfo();
 		userInfo.setUsername(username);
 		userInfo.setNickname(nickname);
