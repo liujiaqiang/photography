@@ -78,8 +78,6 @@
 			<result name="success">/index.jsp</result>
 			<result name="error">/error.jsp</result>
 		</action>
-		<action name="userNameChk" class="com.stardream.project.photography.LoginActivity" method="UserNameChk">
-		</action>
 		<!--UserInfo end!-->
 		
 		<!--ManagerInfo start!-->	
@@ -124,6 +122,12 @@
 			<result name="error">/error.jsp</result>
 		</action>
 		<!--News end!-->
+		
+		<!-- 论坛 -->
+		<action name="bbsPublish" class="com.stardream.project.photography.action.BbsAction" method="bbsPublish">
+			<result name="success">/bbs/listBBS.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
 	</package>
 	
 </struts>

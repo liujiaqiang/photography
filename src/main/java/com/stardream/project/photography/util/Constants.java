@@ -11,4 +11,16 @@ public class Constants {
 	/*锁定 */
 	public static final int lock_no = 0; 
 	public static final int lock_yes = 1; 
+	
+	/*帖子状态*/
+	public static final int forum_status_save = 0;  //草稿
+	
+	public static final int forum_status_review = 1;   //审核
+
+	public static final int forum_status_publish = 2;   //发布
+	
+	public static final int forum_status_no_review = 3;   //审核未通过
+
+	
+
 }

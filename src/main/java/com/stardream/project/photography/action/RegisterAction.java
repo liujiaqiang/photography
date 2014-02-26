@@ -12,6 +12,7 @@ import com.opensymphony.xwork2.Action;
 import com.stardream.project.photography.domain.UserInfo;
 import com.stardream.project.photography.exception.PhotoGraphyException;
 import com.stardream.project.photography.service.GenericService;
+import com.stardream.project.photography.service.LoginService;
 import com.stardream.project.photography.util.Constants;
 
 public class RegisterAction {
@@ -31,9 +32,14 @@ public class RegisterAction {
 	private int ismanager; //是否是论坛管理员、系统管理员
 	private String alternateField1;
 	private String alternateField2;
+	
+	private String onlyOne;  //用户名唯一性的认证
 
 	@Autowired
 	private GenericService<UserInfo, Integer> userService;
+	
+	@Autowired
+	private LoginService loginService;
 
 	public String register() {
 		
@@ -68,6 +74,27 @@ public class RegisterAction {
 		request.setAttribute("errorMessage", "注册成功，请您登录"); 
 		if(ismanager == 2){
 			return "managerLogin";    //系统管理员登录
+		}
+		return Action.SUCCESS;
+	}
+	
+	/*
+	 * 验证用户名的唯一性
+	 */
+	public String checkName(){
+		UserInfo userInfo=new UserInfo();
+		try{
+		    userInfo.setUsername(username);
+		    String onlyOne = loginService.getPassword(username);
+		    if(null == onlyOne || "".equals(onlyOne)){
+		    	this.onlyOne = "0";  //用户名在数据库里没有
+		    }else{
+		    	this.onlyOne = "1";
+		    }
+		    
+		}catch(Exception e){
+			e.printStackTrace();
+			return "register";
 		}
 		return Action.SUCCESS;
 	}
@@ -190,6 +217,14 @@ public class RegisterAction {
 
 	public void setAlternateField2(String alternateField2) {
 		this.alternateField2 = alternateField2;
+	}
+
+	public String getOnlyOne() {
+		return onlyOne;
+	}
+
+	public void setOnlyOne(String onlyOne) {
+		this.onlyOne = onlyOne;
 	}
 
 }

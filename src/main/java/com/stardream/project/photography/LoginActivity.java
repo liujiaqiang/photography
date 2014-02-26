@@ -61,6 +61,8 @@ public class LoginActivity {
 			}
 			
 			session.setAttribute("nickName", userInfo.getNickname());
+			session.setAttribute("userId", userInfo.getId());
+			
 			
 		} catch (Exception e) {
 			errormessage = ",用户登录出现错误！";
@@ -80,13 +82,10 @@ public class LoginActivity {
 		
 		session.removeAttribute("nickName");
 		session.removeAttribute("manager");
+		session.removeAttribute("userId");
 		return Action.SUCCESS;
 	}
 	
-	public String UserNameChk(){
-		
-		return null;
-	}
 	public String getUsername() {
 		return username;
 	}
